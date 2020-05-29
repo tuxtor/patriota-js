@@ -1,0 +1,24 @@
+{
+  "name": "patriota-js",
+  "version": "1.0.0",
+  "description": "A Guatemalan flag that says hello",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepare":"npm run build",
+    "prepublishOnly":"npm run format",
+    "preversion":"",
+    "version":"npm run format && git add -A src",
+    "postversion":"git push && git push --tags"
+  },
+  "keywords": ["flag","Guatemala"],
+  "author": "Victor Orozco",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.3"
+  },
+  "files": ["lib/**/*"]
+}
